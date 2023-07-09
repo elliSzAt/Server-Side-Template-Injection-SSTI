@@ -9,3 +9,24 @@ Có nhiều cách để tấn công và bypass SSTI, và phụ thuộc vào các
   -  Sử dụng các lỗ hổng trong các thư viện và phần mềm được sử dụng: Kẻ tấn công có thể tìm kiếm các lỗ hổng trong các thư viện và phần mềm được sử dụng để triển khai ứng dụng của bạn, chẳng hạn như việc sử dụng các phiên bản thư viện cũ hoặc không được bảo mật. Kẻ tấn công cũng có thể sử dụng các lỗ hổng trong các ứng dụng bên thứ ba được tích hợp trong ứng dụng của bạn.
 
   -  Sử dụng các lỗ hổng trong các framework: Kẻ tấn công có thể tìm kiếm các lỗ hổng trong các framework để triển khai ứng dụng của bạn, chẳng hạn như việc sử dụng các phiên bản framework cũ hoặc không được bảo mật. Kẻ tấn công cũng có thể sử dụng các lỗ hổng trong các tính năng framework như ``session, cookie, authentication`` để thực hiện các cuộc tấn công.
+
+
+
+  -  Sử dụng các kỹ thuật khai thác lỗ hổng phụ thuộc vào kiểu: Kẻ tấn công có thể sử dụng các lỗ hổng phụ thuộc vào kiểu (type juggling) để thực hiện các cuộc tấn công SSTI. Ví dụ, kẻ tấn công có thể sử dụng các giá trị kiểu chuỗi để thay đổi kiểu dữ liệu của biến và thực hiện các phép tính không mong muốn.
+
+  -  Sử dụng các kỹ thuật khai thác lỗ hổng serialization: Kẻ tấn công có thể sử dụng các lỗ hổng serialization để tạo ra các đối tượng độc hại và thực hiện các cuộc tấn công SSTI. Ví dụ, kẻ tấn công có thể tạo ra một đối tượng Python độc hại và truyền nó vào một biểu thức Jinja2 để thực thi mã độc.
+
+  -  Sử dụng các kỹ thuật khai thác lỗ hổng template injection khác: Template injection không chỉ giới hạn ở SSTI, mà còn có thể được sử dụng để khai thác các lỗ hổng khác như template injection trong các framework khác như AngularJS, Vue.js, và React. Kẻ tấn công có thể sử dụng các lỗ hổng này để thực hiện các cuộc tấn công XSS, RCE và các cuộc tấn công khác.
+
+  -  Kết hợp các kỹ thuật khác nhau để tấn công: Kẻ tấn công có thể kết hợp nhiều kỹ thuật khác nhau để tấn công và bypass SSTI. Ví dụ, kẻ tấn công có thể sử dụng kỹ thuật type juggling để thay đổi kiểu dữ liệu của biến và sử dụng kỹ thuật đánh lừa bộ phân tích cú pháp để thực hiện các cuộc tấn công SSTI.
+
+  -  Sử dụng các kỹ thuật khai thác lỗ hổng XPath: Trong trường hợp SSTI được sử dụng trong các ứng dụng web sử dụng XML hoặc XPath, kẻ tấn công có thể sử dụng các lỗ hổng XPath để thực hiện các cuộc tấn công SSTI.
+
+  -  Sử dụng các kỹ thuật khai thác lỗ hổng SQL: Trong trường hợp SSTI được sử dụng trong các ứng dụng web sử dụng SQL, kẻ tấn công có thể sử dụng các lỗ hổng SQL để thực hiện các cuộc tấn công SSTI.
+
+  -  Sử dụng các kỹ thuật khai thác lỗ hổng XML Injection: Kẻ tấn công có thể sử dụng các lỗ hổng XML Injection để thực hiện các cuộc tấn công SSTI trong các ứng dụng sử dụng XML.
+
+  -  Sử dụng các kỹ thuật khai thác lỗ hổng Server-Side Request Forgery (SSRF): Kẻ tấn công có thể sử dụng các lỗ hổng SSRF để thực hiện các cuộc tấn công SSTI bằng cách đưa ra các yêu cầu HTTP không an toàn.
+
+  -  Sử dụng các kỹ thuật khai thác lỗ hổng Remote File Inclusion (RFI): Kẻ tấn công có thể sử dụng các lỗ hổng RFI để thực hiện các cuộc tấn công SSTI bằng cách tải mã độc từ xa và thực thi nó trong ứng dụng.
+
