@@ -8,6 +8,7 @@ def index():
     <html>
         <body>
             <h1>Welcome to Trongdeptrai's website!</h1>
+            <h2>M thích mưa hay thích sấm chớp</h2>
             <p>{{ message }}</p>
         </body>
     </html>
