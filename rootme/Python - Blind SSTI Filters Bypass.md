@@ -1,4 +1,4 @@
-Bài này cung cấp source code, nên chúng ta sẽ thực tải source code về để phân tích:
+![image](https://github.com/elliSzAt/Server-Side-Template-Injection-SSTI/assets/125866921/953855bb-4300-4867-b16e-f74465119956)Bài này cung cấp source code, nên chúng ta sẽ thực tải source code về để phân tích:
 
 server_ch73.py
 
@@ -116,4 +116,19 @@ Giờ chúng ta sẽ thấy kết quả chỗ .csv sẽ trở thành 81hi.csv, c
 
 ``{{ cycler.__init__.__globals__.os.popen('command').read() }}``
 
+Nhưng do khi tiêm payload vào thì mình không nhận thấy bất cứ phản hồi nào từ phía client, do đó mình đã sử dụng reverse shell
 
+ - Đầu tiên dùng ``ngrok tcp 1234`` để tạo tunnel từ cổng 1234.
+ - Tiếp theo nc -lvnp 1234 để lắng nghe port 1234.
+ - Sau đó mình lên ``Reverse shell generator`` để tạo shell dựa vào ip và port mình vừa tạo. Ở đây mình chọn ``nc #2``.
+ - Nhưng do là shell vẫn hơi dài nên mình đã đưa nó lên ``pastebin`` để có thể rút ngắn được số kí tự.
+
+Cuối cùng là dùng curl để lấy đoạn shell từ URL pastebin và |sh để thực thi shell, gửi payload lên và đợi.
+
+![image](https://github.com/elliSzAt/Server-Side-Template-Injection-SSTI/assets/125866921/d878cf26-60d1-4603-bf9e-92fbdcabf2ef)
+
+Sau khi đã connect thì ta thử list các file ra thì phát hiện có file 9f rất khả nghi nên mình đã truy cập vào đó. Nhưng mà do nhìu quá tìm mệt nên mình dùng lệnh ``find flag``.
+
+![image](https://github.com/elliSzAt/Server-Side-Template-Injection-SSTI/assets/125866921/b1fe502c-3253-4946-81f9-857a6d199798)
+
+Như vậy là mình đã hoàn thành xong lab này, hơi mệt nhưng mà mỏi !!!
