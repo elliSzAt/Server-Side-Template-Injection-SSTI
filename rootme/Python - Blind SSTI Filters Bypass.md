@@ -1,5 +1,3 @@
-![image](https://github.com/elliSzAt/Server-Side-Template-Injection-SSTI/assets/125866921/953855bb-4300-4867-b16e-f74465119956)Bài này cung cấp source code, nên chúng ta sẽ thực tải source code về để phân tích:
-
 server_ch73.py
 
 ```
